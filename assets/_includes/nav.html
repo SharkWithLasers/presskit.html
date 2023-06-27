@@ -1,19 +1,14 @@
 <nav class="page-nav nav grid__item">
   <h1 class="nav__title">
-    {{#if isCompany}}
-    <a href=".">{{presskit.title}}</a>
-    {{else}}
-    <a href="..">{{company.title}}</a>
-    {{/if}}
+    {{presskit.title}}
   </h1>
 
+
+  {{#if presskit.website}}
   <aside class="nav__subtitle">
-    {{#if isProduct}}
-    <a href="..">press kit</a>
-    {{else}}
     <a href="{{presskit.website}}">{{prettyURL presskit.website}}</a>
-    {{/if}}
   </aside>
+  {{/if}}
 
   <div class="nav__toggle" id="hamburger">
     <a href="#" class="button" id="hamburger-toggle">
@@ -46,12 +41,6 @@
     {{#if presskit.histories}}
     <li>
       <a class="nav__item" href="#history">History</a>
-    </li>
-    {{/if}}
-
-    {{#if products}}
-    <li>
-      <a class="nav__item" href="#projects">Projects</a>
     </li>
     {{/if}}
 
@@ -102,18 +91,6 @@
       <a class="nav__item" href="#links">Additional Links</a>
     </li>
     {{/if}}
-
-    {{#if isProduct}}
-    <li>
-      <a class="nav__item" href="#about">About {{company.title}}</a>
-    </li>
-    {{/if}}
-
-    {{#each presskit.abouts}}
-    <li>
-      <a class="nav__item" href="#about_{{title}}">About {{title}}</a>
-    </li>
-    {{/each}}
 
     <li>
       <a class="nav__item" href="#credits">Team</a>
