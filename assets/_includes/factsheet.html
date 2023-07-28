@@ -47,10 +47,12 @@
       <a href="{{presskit.website}}">{{prettyURL presskit.website}}</a>
     </dd>
 
+    {{#if presskit.prices.length}}
     <dt>Regular Price:</dt>
     {{#each presskit.prices}}
     <dd>{{currency}} {{value}}</dd>
     {{/each}}
+    {{/if}}
 
     {{#each presskit.relations}}
     <dt>{{type}}:</dt>

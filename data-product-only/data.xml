@@ -86,6 +86,7 @@
   </platforms>
 
   <!-- Show the price of your product. Try to be exhaustive, it will be helpful for a reviewer. -->
+  <!--
   <prices>
     <price>
       <currency>EUR</currency>
@@ -104,6 +105,7 @@
       <value>2300</value>
     </price>
   </prices>
+  -->
 
   <!-- ## Description & History -->
 
