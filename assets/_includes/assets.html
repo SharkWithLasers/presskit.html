@@ -92,21 +92,13 @@
   </aside>
   {{#each images.logos}}
   <a href="images/{{fileName}}">
-    {{if logoDark}}
-    <img src="images/{{fileName}}" alt="{{basename fileName}}" class="logo logoDark">
+    {{#if logoDark}}
+    <img src="images/{{fileName}}" alt="{{basename fileName}}" class="logo logo-dark">
     {{else}}
     <img src="images/{{fileName}}" alt="{{basename fileName}}" class="logo">
     {{/if}}
   </a>
-  {{/each}}
-  <!--
-  {{#each images.logos}}
-  <a href="images/{{.}}">
-    <img src="images/{{.}}" alt="{{basename .}}" class="logo">
-  </a>
-  {{/each}}
-  -->
-  
+  {{/each}}  
 </section>
 {{else}}
 <section class="block">
